@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Test</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+
+<script src="js/main.js"></script>
+</head>
+
+<body class="body">
+@@include('./sprite.html')
+
+<div class="page">
+  <div class="profile-block">
+    <h1 class="profile-block__title">Информация о пациентах</h1>
+
+    <div class="profile-block__content">
+      <img class="profile-block__img" src="/img/profile.svg" alt="" />
+      <strong class="profile-block__subtitle">Заполните свой профиль и получите 100 баллов</strong>
+      <div class="profile-block__text">Заполните базовую информацию о себе, чтобы мы могли подбирать для вас интересные акции и статьи. Информация о пациенте используется только для автозаполнения формы записи и не видна другим пользователям.</div>
+      <div class="profile-block__footer">
+        <div class="btn-fill btn btn-main" id="js-fill">
+          <span class="btn-fill__label">Перейти к заполнению</span>
+          <span class="btn-fill__sep"></span>
+          <span class="btn-fill__score">+100</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="modal-fill">
+  <div class="modal__wrapper">
+
+    <div class="modal-fill modal__block">
+      <form class="modal-fill__form" id="js-from-send" action="#">
+        <div class="modal-fill__head">
+          <span class="modal-fill__title">Личные данные </span>
+          <svg class="modal-fill__close js-modal-close">
+            <use xlink:href="#icn-modal-close" />
+          </svg>
+        </div>
+
+        <div class="modal-fill__core">
+          <div class="modal-fill__section">
+            <b class="modal-fill__section-caption">Факторы риска</b>
+            <div class="modal-fill__alert alert">Эта информация поможет разработать для вас индивидуальный план регулярных обследований, подбирать акции и полезные статьи</div>
+
+            <fieldset class="modal-fill__smoke">
+              <div class="modal-fill__list controls-list">
+                <b class="modal-fill__label controls-list__label">Курение</b>
+                <ul class="controls-list__items">
+                  <li class="controls-list__item">
+                    <label class="radiobox">
+                      <input type="radio" name="smoke" value="0" />
+                      <span class="radiobox__title">Не курю</span>
+                    </label>
+                  </li>
+                  <li class="controls-list__item">
+                    <label class="radiobox">
+                      <input type="radio" name="smoke" value="1" />
+                      <span class="radiobox__title">Курю</span>
+                    </label>
+                  </li>
+                  <li class="controls-list__item">
+                    <label class="radiobox">
+                      <input type="radio" name="smoke" value="2" />
+                      <span class="radiobox__title">Бросил(а)</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+
+            <div class="modal-fill__search search-sick">
+              <b class="search-sick__label modal-fill__label">Хронические заболевания</b>
+              <div class="search-sick__field">
+                <input type="text" class="search-sick__input input input--size-base" placeholder="Начните вводить название" />
+              </div>
+              <ul class="search-sick__tags-list" id="js-fill-tags">
+                <li class="search-sick__tag">Аллергия на анальгин
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Миопия
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Аллергия на анальгин
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Миопия
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Аллергия на анальгин
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Гайморит
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Аллергия на анальгин
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Миопия
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Аллергия на анальгин
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Миопия
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+                <li class="search-sick__tag">
+                  Дипрессия
+                  <svg class="search-sick__icn icn"><use xlink:href="#icn-close" /></svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="modal-fill__section">
+            <b class="modal-fill__section-subcaption">Наследственность</b>
+            <div class="modal-fill__help helper-text">Какие из этих болезней были у ваших ближайших родственников (родителей, братьев, сестёр, бабушек, дедушек)? Это может влиять на вашу предрасположенность </div>
+
+            <div class="modal-fill__heredity">
+              <fieldset class="modal-fill__heredity-item">
+                <div class="modal-fill__list controls-list">
+                  <b class="modal-fill__label controls-list__label">Мужчины</b>
+                  <ul class="controls-list__items">
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="diabet" />
+                        <span class="checkbox__title">Диабет</span>
+                      </label>
+                    </li>
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="gipertoniya" checked />
+                        <span class="checkbox__title">Гипертония</span>
+                      </label>
+                    </li>
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="rakprostati" />
+                        <span class="checkbox__title">Рак простаты</span>
+                      </label>
+                    </li>
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="rakkisheshnika" />
+                        <span class="checkbox__title">Рак толстого кишечника</span>
+                      </label>
+                    </li>
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="melanoma" />
+                        <span class="checkbox__title">Меланома кожи</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="modal-fill__heredity-item">
+                <div class="modal-fill__list controls-list">
+                  <b class="modal-fill__label controls-list__label">Женщины</b>
+                  <ul class="controls-list__items">
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="diabet" />
+                        <span class="checkbox__title">Диабет</span>
+                      </label>
+                    </li>
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="gipertoniya" checked />
+                        <span class="checkbox__title">Гипертония</span>
+                      </label>
+                    </li>
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="rakprostati" />
+                        <span class="checkbox__title">Рак простаты</span>
+                      </label>
+                    </li>
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="rakkisheshnika" />
+                        <span class="checkbox__title">Рак толстого кишечника</span>
+                      </label>
+                    </li>
+                    <li class="controls-list__item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="melanoma" />
+                        <span class="checkbox__title">Меланома кожи</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-fill__footer">
+          <button type="submit" class="modal-fill__footer-btn btn btn--size-base btn-main ">Добавить</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="modal__overlay"></div>
+</div>
+
+
+</body>
+</html>

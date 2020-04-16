@@ -1,0 +1,49 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: $btn-line-heigh;
+  text-align: center;
+  transition: background .3s;
+  position: relative;
+  bottom: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  max-width:100%;
+  opacity: 1;
+  text-overflow: ellipsis;
+  user-select: none;
+
+  // state
+  &:hover {
+    text-decoration:none;
+    cursor:pointer;
+  }
+
+  // sizes
+  &--size-base {
+    font-size: 13px;
+    height: 48px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
+
+.btn-main {
+  background:$color-main;
+  color: $color-white;
+  border-radius: 4px;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba($color-black, 0.1);
+  font-feature-settings: 'ordn' on;
+
+  &:hover {
+    background: lighten($color-main, 5%);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}

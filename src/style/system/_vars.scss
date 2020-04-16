@@ -1,0 +1,36 @@
+// Colors
+$color-black: #000;
+$color-white: #fff;
+
+$color-bg: #FAFBFF;
+$color-content: #1B234A;
+$color-main: #40B3B7;
+$color-main-darken: #36A1AF;
+$color-main-lighten: #DAFBF1;
+$color-sub: #616F97;
+$color-alert: #FFF4CC;
+$color-border: #DEE1ED;
+$color-muted: #A0A8C5;
+$color-light: #F3F6FB;
+
+$color-link: $color-main;
+$color-link-hover: darken($color-main, 20%);
+
+// Fonts options
+$font: "Montserrat", Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+$font-base: 62.5%;
+$font-size: 16px;
+$line-height: 1.5;
+
+$btn-line-heigh: 1.25;
+$form-line-height: 1.25;
+
+// Media
+$media-tablet: 768px;
+$media-mobile: 425px;
+
+// MIX
+@mixin font-size($fontSize, $fontInterliase) {
+  font-size: $fontSize;
+	line-height: $fontInterliase / $fontSize;
+}
