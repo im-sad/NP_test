@@ -34,7 +34,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   },
   "main": "index.js",
   "repository": "git@github.com:im-sad/BaseGulp.git",
